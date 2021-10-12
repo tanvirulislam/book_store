@@ -26,34 +26,65 @@ class HomeScreen extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             UserAccountsDrawerHeader(
-              accountName: Text("Tanvirul islam"),
-              accountEmail: Text("tanvirul.cse.diu@gmail.com"),
+              accountName: Text(
+                "Tanvirul islam",
+                style: TextStyle(color: Colors.black, fontSize: 18),
+              ),
+              accountEmail: Text(
+                "tanvirul.cse.diu@gmail.com",
+                style: TextStyle(color: Colors.black, fontSize: 18),
+              ),
               currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(
                       "https://codetreebd.com/public/uploads/team_image/1618065136.jpg")),
             ),
             ListTile(
-              leading: Icon(Icons.person),
-              title: Text('Account'),
-              subtitle: Text('personal'),
-              trailing: Icon(Icons.edit),
+              leading: Icon(Icons.file_upload),
+              title: Text(
+                'Upload Book',
+                style: TextStyle(fontSize: 18),
+              ),
             ),
             ListTile(
-              leading: Icon(Icons.email),
-              title: Text('Email'),
-              subtitle: Text('tanvirul.cse.diu@gmail.com'),
-              trailing: Icon(Icons.send),
+              leading: Icon(Icons.star_rate_outlined),
+              title: Text(
+                'Starred',
+                style: TextStyle(fontSize: 18),
+              ),
             ),
             ListTile(
-              leading: Icon(Icons.app_registration),
-              title: Text('Ragistration'),
+              leading: Icon(Icons.folder_shared),
+              title: Text(
+                'Shared with me',
+                style: TextStyle(fontSize: 18),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.download_for_offline),
+              title: Text(
+                'Ofline',
+                style: TextStyle(fontSize: 18),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.restore_from_trash),
+              title: Text(
+                'Trash',
+                style: TextStyle(fontSize: 18),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.account_box),
+              title: Text(
+                'Account',
+                style: TextStyle(fontSize: 18),
+              ),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Registration()),
                 );
               },
-              trailing: Icon(Icons.app_registration),
             ),
           ],
         ),
